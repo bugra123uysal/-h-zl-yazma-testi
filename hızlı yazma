@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>hızlı yazma</title>
+  <style>
+    /* kelimererin olduğu div yeri */
+    #kelimeler{
+      position: absolute;
+      height: 70px;
+      width: 200px;
+      border: solid 3px blue;
+      left: 620px;
+      top: 100px;
+      text-align: center;
+    }
+
+    /* kullanıcıların kelimeyi yazdığı yer  */
+    #yaz{
+      position: absolute;
+      top: 450px;
+      left: 550px;
+      height: 35px;
+      width: 400px;
+    }
+
+    /* oyuna başla buttonu */
+    #başlaa{
+      position: absolute;
+      left: 980px;
+      top: 457px;
+      height: 30px;
+      width: 70px;
+      background-color: royalblue;
+
+    }
+    #aa{
+      position: absolute;
+      bottom: 10px;
+    }
+    /* kullanıcı ismi */
+    #ays{
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      height: auto;
+      width: auto;
+      border: dashed 1px blue ;
+
+    }
+    /* toplam puan */
+    #g{
+      position: absolute;
+      top: 40px;
+      left: 1px;
+
+    }
+
+  </style>
+</head>
+<body>
+  <!-- puan toplamı yazan yer -->
+  <p id="g"></p>
+  
+  <!-- kelimererin olduğu div yeri-->
+ <h2 id="kelimeler"></h2>
+  <!-- kullanıcıların kelimeyi yazdığı yer -->
+  <input type="text" id="yaz">
+  <!-- kullanıcı ad yazacak yer -->
+  <p id="ays"></p>
+  
+  
+<!-- kontrol et -->
+<button onclick="baş()" id="başlaa" >kontrol et</button>
+
+
+<script>
+  /* kullanıcı ad yeri sağ tarafda */
+  var sağta=localStorage.getItem("ff");
+  var adys=document.getElementById("ays").innerHTML=sağta;
+  
+  var kelim=["Renkli","para","mektup","muz","kas","zemin","sayı","makarna","çengel","salatalık","muz","motor","elektrik","priz","havuz","kırmızı","biber","rüzgar","dokuz","dava","yarım","cins",
+    "tuğla","sandık","amerika","rusya","varlık","öğretmen","polis","doktor","futbol","liman","kalem","peçete","zebra","aslan","çamur","fener","hakem","tahta","tabure","telefon","cesur","peruk",
+  "buhar","banka","patates","patlıcan","venedik","paris","hollanda","danimarka","isveç","isviçre","iran","ırak","sincap","sınav","pencere","park","ben","elma","armut","limon","şeftali",
+"zencefil","bal","kaymak","çikolata","ılık","banyo","hamam","iletişim","konya","şırnak","artvin","bursa","ıspanak","takım","pembe"];
+      var kkk=kelim [Math.floor(Math.random()*kelim.length)];
+
+var gt=  document.getElementById("kelimeler").innerHTML=kkk;
+
+
+    function baş(){
+
+var kelim=["Renkli","para","mektup","muz","kas","zemin","sayı","makarna","çengel","salatalık","muz","motor","elektrik","priz","havuz","kırmızı","biber","rüzgar","dokuz","dava","yarım","cins",
+    "tuğla","sandık","amerika","rusya","varlık","öğretmen","polis","doktor","futbol","liman","kalem","peçete","zebra","aslan","çamur","fener","hakem","tahta","tabure","telefon","cesur","peruk",
+  "buhar","banka","patates","patlıcan","venedik","paris","hollanda","danimarka","isveç","isviçre","iran","ırak","sincap","sınav","pencere","park","ben","elma","armut","limon","şeftali",
+"zencefil","bal","kaymak","çikolata","ılık","banyo","hamam","iletişim","konya","şırnak","artvin","bursa","ıspanak","takım","pembe"];
+
+   
+      var kkk=kelim [Math.floor(Math.random()*kelim.length)];
+      
+      var yaaz=document.getElementById("yaz").value;
+var gt = document.getElementById("kelimeler").textContent=kkk;
+
+var a=0 ;
+if(kelim.includes(yaaz)){
+ 
+
+
+ var aaa= document.getElementById("g").innerHTML="+10 puan"
+ 
+}else{
+
+  document.getElementById("g").innerHTML="-10 puan"
+
+  
+}
+
+var yaaz=document.getElementById("yaz").value="";
+
+
+  }
+
+ 
+
+
+
+ 
+ 
+</script>
+</body>
+</html>
