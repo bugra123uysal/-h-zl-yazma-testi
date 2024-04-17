@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>kayıt ol</title>
+  <style>
+/*başal buttonu */
+#b{
+  position: absolute;
+  top: 340px;
+  left: 690px;
+  height: 35px;
+  width: 70px;
+
+}
+/* ad yazma yeri */
+#a{
+  position: absolute;
+  top: 200px;
+  left: 610px;
+  height: 30px;
+  width: 250px;
+  object-fit: cover;
+
+}
+/* soldaki resim */
+#sol{
+  position: absolute;
+  height: 685px;
+  width: 400px;
+  opacity: 0.2;
+  object-fit:cover;
+   
+  
+
+  
+
+}
+
+
+/* sağ tarfdaki resim */
+#sağ{
+  background-image: url('');
+
+  position: absolute;
+  right: 0px;
+  height: 685px;
+  width: 470px;
+  opacity: 0.2;
+  object-fit:cover;
+ 
+  
+  
+
+
+}
+  </style>
+</head>
+<body>
+  <input type="text" placeholder="adınızı giriniz" id="a">
+  <button  id="b" onclick="bşl()">başla</button>
+  <img src="c:\Users\buğra\Desktop\klavyede hızlı yazma\cubes-letters-wooden-shape-wallpaper-preview.jpg" id="sol">
+  <img src="c:\Users\buğra\Desktop\klavyede hızlı yazma\HTB1WntZKXXXXXXRXpXXq6xXFXXXJ.jpg_640x640Q90.jpg_.webp" id="sağ">
+
+  <script>
+    function bşl(){
+      var adıny=document.getElementById("a").value;
+
+      var ii=localStorage.setItem("ff",adıny);
+
+      location.href="hızlı yazma programı.html";
+
+    }
+  </script>
+  
+</body>
+</html>
